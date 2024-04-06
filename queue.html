@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue in DSA</title>
+    <script>
+        let queue = [];
+        let currentSize = queue.length;
+        let maxSize = 5;
+
+        function enqueue(newVal) {
+            if (currentSize >= maxSize) {
+                alert("queue already full")
+            }
+            else {
+                queue[currentSize] = newVal;
+                currentSize++;
+            }
+        }
+
+        function dequeue(){
+            for(let i=0; i<queue.length; i++){
+                queue[i]=queue[i+1]
+            }
+            currentSize--;
+            queue.length=currentSize;
+        }
+        function Display() {
+            console.warn(queue)
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Queue in DSA </h2>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Array</title>
+    <script>
+        let data = [60,23,50,45,25,10]
+        let newElem = 55;
+        let position = 2;
+
+        console.warn(data)
+        for (i = data.length-1; i>=0; i--){
+            if(i>=position)
+            {
+                data[i+1]=data[i]
+            }
+            if(i==position){
+                data[i]=newElem;
+            }
+        }
+        console.warn(data)
+    </script>
+</head>
+<body>
+    Insert Array data 
+</body>
+</html>
